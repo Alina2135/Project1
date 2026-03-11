@@ -27,7 +27,7 @@ root.title("Пробний Калькулятор")
 
 # UI/UX помилка 1: низький контраст кнопок (світлий текст на світлому фоні)
 root.configure(bg="white")
-
+# Додаю цей коментар для перевірки
 entry = tk.Entry(root, width=25, font=("Arial", 14))
 entry.grid(row=0, column=0, columnspan=4, padx=5, pady=5)
 
@@ -53,4 +53,5 @@ for b in buttons:
         row += 1
 
 # UI/UX помилка 3: кнопка "=" не в кінці ряду (зміщена)
+
 root.mainloop()
