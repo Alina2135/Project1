@@ -26,7 +26,7 @@ root = tk.Tk()
 root.title("Пробний Калькулятор")
 
 # UI/UX помилка 1: низький контраст кнопок (світлий текст на світлому фоні)
-root.configure(bg="white")
+root.configure(bg="#2d2d2d")  # темний фон
 
 # Коментар з main
 
@@ -45,8 +45,9 @@ buttons = [
 row = 1
 col = 0
 for b in buttons:
+     # ========== ЗМІНЕНО: кнопки темніші ==========
     button = tk.Button(root, text=b, width=7, height=3,
-                       bg="lightgray", fg="white",  # UI/UX помилка 2: низький контраст
+                       bg="#555555", fg="white",  # ЗМІНЕНО: було bg="lightgray", fg="white"
                        command=lambda x=b: click(x))
     button.grid(row=row, column=col, padx=2, pady=2)
     col += 1
