@@ -48,6 +48,7 @@ for b in buttons:
      # ========== ЗМІНЕНО: кнопки темніші ==========
     button = tk.Button(root, text=b, width=7, height=3,
                        bg="#555555", fg="white",  # ЗМІНЕНО: було bg="lightgray", fg="white"
+                       font=("Arial", 12, "bold"),
                        command=lambda x=b: click(x))
     button.grid(row=row, column=col, padx=2, pady=2)
     col += 1
