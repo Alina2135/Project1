@@ -15,6 +15,13 @@ def click(button_text):
             result = str(eval(expression))              # ЗМІНЕНО: обчислюємо вираз
             entry.delete(0, tk.END)
             entry.insert(tk.END, result)
+        # ========== ЗМІНЕНО ДЛЯ БАГУ #5 ==========
+            # Проблема: кнопка "C" залишає пробіл у полі вводу
+            # Виправлення: видаляємо ВСЕ без додавання пробілу
+        elif button_text == "C":
+        
+            entry.delete(0, tk.END)  
+            # Тепер після очищення поле є повністю порожнім
         elif button_text == "0":
             # Функціональна помилка 3: нуль не додається
             pass
