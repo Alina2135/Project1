@@ -5,14 +5,16 @@ from tkinter import messagebox
 def click(button_text):
     try:
         if button_text == "=":
-            # Функціональна помилка 1: ділення на нуль не обробляється
-            result = str(eval(entry.get()))
+           # ========== ЗМІНЕНО ДЛЯ БАГУ #4 ==========
+            # Проблема: програма вилітає при діленні на нуль
+            # Виправлення: перевіряємо, чи є ділення на нуль, і показуємо помилку
+            expression = entry.get()                    # ЗМІНЕНО: отримуємо вираз
+            if "/0" in expression:                      # ЗМІНЕНО: перевіряємо ділення на нуль
+                messagebox.showerror("Помилка", "Ділення на нуль неможливе!")
+                return                                   # ЗМІНЕНО: виходимо з функції
+            result = str(eval(expression))              # ЗМІНЕНО: обчислюємо вираз
             entry.delete(0, tk.END)
             entry.insert(tk.END, result)
-        elif button_text == "C":
-            # Функціональна помилка 2: кнопка очищення не очищає повністю
-            entry.delete(0, tk.END)
-            entry.insert(tk.END, " ")  # залишається пробіл
         elif button_text == "0":
             # Функціональна помилка 3: нуль не додається
             pass
