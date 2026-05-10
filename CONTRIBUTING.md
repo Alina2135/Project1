@@ -64,4 +64,4 @@ npm test
 Учасники повинні дотримуватись  [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). 
 
 ## Контакти
-Автор: @Alina2135 
+Автор: https://github.com/Alina2135 
