@@ -40,4 +40,4 @@
 4. Виконайте команду:
    ```bash
    python Pr1_Biriuk.py
-## 👉 Детальніше у файлі [CONTRIBUTING.md](CONTRIBUTING.md)
+**👉 Детальніше у файлі [CONTRIBUTING.md](CONTRIBUTING.md)**
